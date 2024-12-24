@@ -1,4 +1,4 @@
-# Smart Buyer Assistantm [In Progress...]
+# Smart Buyer Assistant  [in progress...🚧]
 
 The **Smart Buyer Assistant** is a product recommendation system that uses collaborative filtering to suggest personalized products to users based on their preferences and purchase behavior.
 
