@@ -5,8 +5,8 @@ The **Smart Buyer Assistant** is a product recommendation system that uses colla
 ---
 
 ## Table of Contents
-1. [Project Overview](#-project-overview)
-2. [Dataset](#-dataset)
+1. [Project Overview](#project-overview)
+2. [Dataset](#dataset)
 3. [How to Run](#how-to-run)
 ---
 
