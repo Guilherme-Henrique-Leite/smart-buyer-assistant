@@ -42,7 +42,7 @@ git clone https://github.com/Guilherme-Henrique-Leite/smart-buyer-assistant.git
 It is recommended to use a virtual environment to manage dependencies. If you're using pip, you can set up a virtual environment by running the following commands:
   ```
   python3 -m venv venv
-  - source venv/bin/activate  # On Windows, use venv\Scripts\activate
+  - source venv/bin/activate  # Or On Windows, use venv\Scripts\activate
   ```
 
 Install the required dependencies:
