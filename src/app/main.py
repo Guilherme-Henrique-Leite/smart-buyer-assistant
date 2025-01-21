@@ -2,8 +2,8 @@
 
 import streamlit as st
 
-from .model import load_model, get_recommendations
-from .utils import show_sample_users, display_recommendations
+from src.app.model import load_model, get_recommendations
+from src.app.utils import show_sample_users, display_recommendations
 
 
 def main():
