@@ -39,7 +39,7 @@ git clone https://github.com/Guilherme-Henrique-Leite/smart-buyer-assistant.git
 ```
 
 ### 2. Set up the Environment
-It is recommended to use a virtual environment to manage dependencies. If you're using pip, you can set up a virtual environment by running the following commands:
+It is recommended to use a virtual environment to manage dependencies. You can set up a virtual environment by running the following commands:
   ```
   python3 -m venv venv
   - source venv/bin/activate  # Or On Windows, use venv\Scripts\activate
