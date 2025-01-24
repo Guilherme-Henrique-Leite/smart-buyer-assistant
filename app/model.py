@@ -1,7 +1,5 @@
 """Model operations for recommendation system."""
 
-from pathlib import Path
-
 import numpy as np
 import streamlit as st
 
@@ -9,21 +7,20 @@ import streamlit as st
 @st.cache_data
 def load_model():
     """Load and return recommendation model components."""
-    current_dir = Path(__file__).parent.parent.parent
-    model_path = current_dir / "notebooks" / "models" / "recommendation_model.npz"
-
-    if not model_path.exists():
-        raise FileNotFoundError(f"Model not found in: {model_path}")
-
-    model_data = np.load(model_path, allow_pickle=True)
-    return (
-        model_data["U"],
-        model_data["sigma"],
-        model_data["Vt"],
-        dict(model_data["user_mapper"]),
-        dict(model_data["item_mapper"]),
-        model_data["ratings_mean"],
-    )
+    try:
+        model_path = "models/recommendation_model.npz"
+        model_data = np.load(model_path, allow_pickle=True)
+        return (
+            model_data["U"],
+            model_data["sigma"],
+            model_data["Vt"],
+            dict(model_data["user_mapper"]),
+            dict(model_data["item_mapper"]),
+            model_data["ratings_mean"],
+        )
+    except FileNotFoundError:
+        st.error("Model file not found. Please ensure the model is properly uploaded.")
+        return None
 
 
 def get_recommendations(
