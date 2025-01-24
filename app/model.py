@@ -1,7 +1,5 @@
 """Model operations for recommendation system."""
 
-from pathlib import Path
-
 import numpy as np
 import streamlit as st
 
