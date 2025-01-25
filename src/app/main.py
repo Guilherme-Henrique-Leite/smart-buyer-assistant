@@ -1,13 +1,13 @@
 """Main application module for the Smart Buyer Assistant."""
 
 import streamlit as st
-
-from app.model import load_model, get_recommendations
-from app.utils import show_sample_users, display_recommendations
+import numpy as np
+import pandas as pd
+from src.app.model import load_model, get_recommendations
+from src.app.display import display_recommendations, show_sample_users
 
 
 def main():
-    """Initialize and run the main application."""
     st.set_page_config(page_title="Smart Buyer Assistant", layout="wide")
     st.title("Smart Buyer Assistant 🛍️")
     st.write("Product Recommendation System")

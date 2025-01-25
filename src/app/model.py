@@ -6,9 +6,8 @@ import streamlit as st
 
 @st.cache_data
 def load_model():
-    """Load and return recommendation model components."""
     try:
-        model_path = "models/recommendation_model.npz"
+        model_path = "notebooks/models/recommendation_model.npz"
         model_data = np.load(model_path, allow_pickle=True)
         return (
             model_data["U"],
@@ -26,19 +25,6 @@ def load_model():
 def get_recommendations(
     user_id, U, sigma, Vt, user_mapper, item_mapper, ratings_mean, n_recommendations=5
 ):
-    """Generate product recommendations for a given user.
-
-    :user_id: ID of the user to generate recommendations for
-    :U: User feature matrix
-    :sigma: Singular values
-    :Vt: Transposed item feature matrix
-    :user_mapper: Dictionary mapping user IDs
-    :item_mapper: Dictionary mapping item IDs
-    :ratings_mean: Global mean of ratings
-    :n_recommendations: Number of recommendations to generate (default: 5)
-
-    :return: List of tuples (product_id, rating)
-    """
     try:
         if user_id not in user_mapper:
             st.error(f"User {user_id} not found!")
