@@ -10,8 +10,6 @@ The **Smart Buyer Assistant** is a product recommendation system using collabora
 3. [Dataset](#dataset)
 4. [Installation and Setup](#installation-and-setup)
 5. [Usage](#usage)
-6. [Additional Information](#additional-information)
-
 ---
 
 ## Project Overview
